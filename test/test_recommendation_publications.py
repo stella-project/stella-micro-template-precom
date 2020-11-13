@@ -43,17 +43,17 @@ class TestApp(unittest.TestCase):
         self.assertEqual(content.get('rpp'), rpp)
         self.assertEqual(content.get('item_id'), item_id)
 
-    def test_05_ranking_not_empty(self):
+    def test_05_recommendation_not_empty(self):
         url = 'http://' + IP + ':' + PORT + '/recommendation/publications?item_id=' + item_id + '&page=' + str(page) + '&rpp=' + str(rpp)
         res = requests.get(url)
         content = json.loads(res.content)
         self.assertGreater(len(content.get('itemlist')), 0)
 
-    def test_06_ranking_length(self):
+    def test_06_recommendation_length(self):
         url = 'http://' + IP + ':' + PORT + '/recommendation/publications?item_id=' + item_id + '&page=' + str(page) + '&rpp=' + str(rpp)
         res = requests.get(url)
         content = json.loads(res.content)
-        self.assertEqual(len(content.get('itemlist')), rpp)
+        self.assertEqual(len(content.get('itemlist')), content.get('num_found'))
 
 
 if __name__ == '__main__':

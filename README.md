@@ -1,5 +1,7 @@
 # Micro template of the STELLA infrastructure (for precomputed results)
 
+### How to submit your system results to the STELLA infrastructure in 10 steps
+
 This repository provides interested experimenters with a template for integrating their ranking and recommendation systems into the [STELLA infrastructure](https://stella-project.org/). In comparison to full-fledged systems (based on the [stella-micro-template](https://github.com/stella-project/stella-micro-template)), it may be more convenient for some participants to submit the system's output only. In this case, participants upload their runs with TREC file syntax to our public [STELLA server]() and the results are integrated into the [STELLA app](https://github.com/stella-project/stella-app) for experimentation. More specifically, the workflow is as follows:
 
 1. Decide if you want to contribute a document ranker (for the life sciences at [LIVIVO](https://www.livivo.de/)) or a dataset recommender (for the social sciences at [GESIS](https://www.gesis.org/en/home))

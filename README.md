@@ -1,4 +1,4 @@
-# Micro template of the STELLA infrastructure (for precomputed results)
+# Micro template (for precomputed results)
 
 ### How to submit your system results to the STELLA infrastructure in 10 steps
 

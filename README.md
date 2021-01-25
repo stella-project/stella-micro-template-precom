@@ -4,9 +4,9 @@ This repository provides interested experimenters with a template for integratin
 
 1. Decide if you want to contribute a document ranker (for the life sciences at [LIVIVO](https://www.livivo.de/)) or a dataset recommender (for the social sciences at [GESIS](https://www.gesis.org/en/home))
 2. Depending on your chosen task, you have to download the corresponding datasets [here](https://th-koeln.sciebo.de/s/OBm0NLEwz1RYl9N)
-3. Besides the datasets, you are provided with head queries (top-k queries) or head item (top-k target items of the recommendations)
+3. Besides the datasets, you are provided with head queries (top-k queries) or head items (top-k target items of the recommendations)
 4. Your systems have to index the datasets and rankings/recommendations should be retrieved with the help of the head queries/items
-5. The results are supposed to be submitted with TREC run file syntax (see below). Each line contains the numeric query identifier (`<qid>`), a string identifying the document (`<docid>`), an increasing rank number (`<rank>`), the corresponding score (`<score>`), and the tag chosen by the experimenters (`<identifier>`)
+5. The results are supposed to be submitted with TREC run file syntax (see below). Each line contains the query/item identifier (`<qid>`), a string identifying the document (`<docid>`), an increasing rank number (`<rank>`), the corresponding score (`<score>`), and the tag chosen by the experimenters (`<identifier>`)
 
 ```
 <qid> <Q0> <docid> <rank> <score> <identifier>

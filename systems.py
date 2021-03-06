@@ -26,6 +26,7 @@ class Ranker(object):
             ranking = self.idx[self.idx['num'] == qid]
             itemlist = list(ranking['docid'][page * rpp:(page + 1) * rpp])
         else:
+            ranking = []
             itemlist = []
 
         return {
@@ -33,7 +34,7 @@ class Ranker(object):
             'rpp': rpp,
             'query': query,
             'itemlist': itemlist,
-            'num_found': len(itemlist)
+            'num_found': len(ranking)
         }
 
 
@@ -64,6 +65,7 @@ class Recommender(object):
             recommendation = self.idx_datasets[self.idx_datasets['num'] == item_id]
             itemlist = list(recommendation['docid'][page * rpp:(page + 1) * rpp + 1])
         else:
+            recommendation = []
             itemlist = []
 
         return {
@@ -71,7 +73,7 @@ class Recommender(object):
             'rpp': rpp,
             'item_id': item_id,
             'itemlist': itemlist,
-            'num_found': len(itemlist)
+            'num_found': len(recommendation)
         }
 
     def recommend_publications(self, item_id, page, rpp):
@@ -80,6 +82,7 @@ class Recommender(object):
             recommendation = self.idx_publications[self.idx_publications['num'] == item_id]
             itemlist = list(recommendation['docid'][page * rpp:(page + 1) * rpp])
         else:
+            recommendation = []
             itemlist = []
 
 
@@ -88,5 +91,5 @@ class Recommender(object):
             'rpp': rpp,
             'item_id': item_id,
             'itemlist': itemlist,
-            'num_found': len(itemlist)
+            'num_found': len(recommendation)
         }

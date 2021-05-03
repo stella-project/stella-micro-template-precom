@@ -1,5 +1,4 @@
 # Micro template (for precomputed results)
-[![Validate Run](https://github.com/stella-project/stella-micro-template-precom/actions/workflows/manual-dispatch.yml/badge.svg)](https://github.com/stella-project/stella-micro-template-precom/actions/workflows/manual-dispatch.yml)
 
 ### How to submit your system results to the STELLA infrastructure in 10 steps
 
